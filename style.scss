@@ -1,0 +1,735 @@
+//VARIABLES
+$font-family:'Open Sans',
+sans-serif;
+$font-size:17px;
+$h1-size:90px;
+$h2-size:40px;
+$h3-size:30px;
+
+%btn-class {
+
+    color: white;
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+
+}
+
+%input-class {
+
+    height: 40px;
+    width: 250px;
+    background-color: #F7F7F7;
+    border: none;
+
+}
+
+//GENERAL SETTINGS
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    font-family: $font-family;
+    font-size: $font-size;
+    overflow-x: hidden;
+}
+
+img {
+
+    width: 100%;
+    height: auto;
+}
+
+// CONTAINER SETTINGS
+
+.container {
+
+    width: 80%;
+    margin: 0 auto 0 auto;
+}
+
+.containerFluid {
+
+    width: 100%;
+
+}
+
+.sectionCardContainer {
+
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+// MAIN SETTINGS
+
+header {
+
+
+    height: 950px;
+    background-image: url(img/header-background.jpg);
+    background-size: cover;
+    background-position: center;
+    padding-top: 40px;
+}
+
+.navbar {
+
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+
+.responsive {
+
+    display: block;
+}
+
+.icon {
+
+    display: none;
+    color: black;
+}
+
+.logo {
+
+
+
+    h2 {
+        font-weight: 900;
+        letter-spacing: 2px;
+        color: #2980b9;
+    }
+}
+
+.menu {
+
+
+    ul {
+
+        display: flex;
+        list-style: none;
+
+        li {
+
+            padding: 15px;
+
+            a {
+
+                text-decoration: none;
+                color: black;
+
+            }
+        }
+    }
+}
+
+.headerTextBox {
+
+    width: 40%;
+    margin: 200px auto 0 auto;
+    color: white;
+    text-align: center;
+
+    h1 {
+
+        font-size: $h1-size;
+        letter-spacing: 1px;
+    }
+}
+
+
+
+.blue_btn {
+
+    @extend %btn-class;
+    background-color: #2980b9;
+}
+
+.orange_btn {
+
+    @extend %btn-class;
+    background-color: #f2745f;
+    margin-left: 30px;
+}
+
+.section-1 {
+
+    padding: 60px;
+    background-color: #46BAE2;
+    color: white;
+    text-align: center;
+    transform:translateX(-100%);
+    transition:all ease 2s;
+  
+
+    h2 {
+
+        font-size: $h2-size;
+    }
+
+    h4 {
+
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    button {
+
+        @extend %btn-class;
+        border: 1px solid white;
+        background-color: transparent;
+    }
+}
+
+.section-2 {
+
+
+    background-image: url(img/section.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    transform:translateX(100%);
+    transition:all ease 2s;
+
+    .sectionCardBox {
+        width: 33.333%;
+        color: white;
+        text-align: center;
+        padding: 80px;
+
+        .cardHeader {
+
+            margin-bottom: 40px;
+            margin-top: 40px;
+        }
+
+        i {
+
+            font-size: 65px;
+        }
+    }
+
+}
+
+.orangeCard {
+
+    background-color: rgba(242, 116, 95, 0.6);
+}
+
+.blackCard {
+
+    background-color: rgba(0, 8, 71, 0.6);
+}
+
+.blueCard {
+
+    background-color: rgba(70, 186, 226, 0.6);
+}
+
+.section-3 {
+
+    padding-top: 120px;
+    transform:translateX(-100%);
+    transition:all ease 2s;
+
+    .sectionHeader {
+
+        width: 45%;
+        padding: 50px;
+        text-align: center;
+        margin: 0 auto 0 auto;
+
+        h3 {
+
+            font-size: $h3-size;
+            margin-bottom: 20px;
+        }
+
+    }
+
+    .sectionCardBox {
+
+        text-align: center;
+        width: 18%;
+        height: auto;
+        padding: 50px 0 50px 0;
+        background-color: #F4F4F4;
+        cursor: pointer;
+
+        .cardLogo {
+
+            margin-bottom: 20px;
+
+        }
+    }
+
+}
+
+.section-4 {
+
+    padding: 80px 0 120px 0;
+    transform:translateX(100%);
+    transition:all ease 2s;
+    
+    .sectionCardBox:nth-child(1) {
+
+        width: 55%;
+        height: auto;
+    }
+
+    .sectionCardBox:nth-child(2) {
+
+        width: 40%;
+        height: auto;
+    }
+
+    h3 {
+
+        margin-bottom: 30px;
+    }
+
+    .blue_btn {
+
+        margin-top: 40px;
+    }
+}
+
+.section-5 {
+
+    background-color: #363E50;
+    padding: 120px 0 120px 0;
+    color: white;
+    margin-top: 50px;
+    transform:translateX(-100%);
+    transition:all ease 2s;
+
+    .sectionHeader {
+
+        width: 45%;
+        margin: 0 auto 40px auto;
+        text-align: center;
+
+        h3 {
+
+            font-size: $h3-size;
+            margin-bottom: 20px;
+        }
+    }
+
+    .sectionCardBox {
+
+        width: 21%;
+        height: auto;
+        cursor: pointer;
+    }
+}
+
+.section-6 {
+
+    padding: 120px 0 120px 0;
+    background-color: #F4F4F4;
+    transform:translateX(100%);
+    transition:all ease 2s;
+
+    .sectionHeader {
+
+        width: 45%;
+        margin: 0 auto 40px auto;
+        text-align: center;
+
+        h3 {
+
+            margin-bottom: 25px;
+            font-size: $h3-size;
+        }
+
+    }
+
+    .sectionCardBox:nth-child(1) {
+
+        width: 50%;
+    }
+
+    .sectionCardBox:nth-child(2) {
+
+        width: 45%;
+
+        p {
+            margin-bottom: 15px;
+        }
+
+
+        .cardText {
+
+            width: 90%;
+            padding: 20px;
+            box-shadow: 5px 2px 5px lightgray;
+            background-color: white;
+            position: relative;
+            margin: -50px auto 0 auto;
+
+            .sectionCardElement {
+
+                display: flex;
+                justify-content: start;
+                margin: 20px 0 20px 0;
+
+                .cardElement {
+
+                    margin-right: 15px;
+
+                    i {
+
+                        color: #46BAE2;
+                    }
+                }
+            }
+        }
+    }
+
+    .section_6_cnt {
+
+        display: flex;
+        flex-direction: column;
+
+        .sectionCardBox {
+
+            width: 100%;
+            padding: 25px;
+            background-color: white;
+            margin-bottom: 30px;
+            box-shadow: 5px 2px 5px lightgray;
+
+            .sectionCardElement {
+
+                display: flex;
+                justify-content: start;
+                margin-top: 15px;
+
+                .cardElement {
+
+                    margin-right: 15px;
+
+                    i {
+
+                        color: #46BAE2;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+footer {
+
+    padding-top: 120px;
+    transform:translateX(-100%);
+    transition:all ease 2s;
+
+    .inputClass {
+
+        @extend %input-class;
+        margin-right: 15px;
+    }
+
+    .msgInput {
+
+        @extend %input-class;
+        width: 100%;
+        height: 250px;
+        padding: 10px 20px;
+        resize: none;
+
+    }
+
+    .inputGroup {
+
+        margin-bottom: 20px;
+
+    }
+
+    .sectionHeader {
+
+        width: 45%;
+        margin: 0 auto 50px auto;
+        text-align: center;
+
+        h3 {
+
+            font-size: $h3-size;
+        }
+
+        p {
+
+            margin: 20px 0 20px 0;
+        }
+    }
+}
+
+.buttomFooter {
+
+    padding-bottom: 20px;
+    background-color: #363E50;
+    margin-top: 120px;
+
+
+    .sectionCardBox:nth-child(1) {
+
+        width: 25%;
+        color: white;
+        margin-top: 40px;
+    }
+
+    .sectionCardBox:nth-child(2) {
+
+        width: 25%;
+
+        margin-top: 40px;
+
+        ul {
+
+            list-style: none;
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+
+            li {
+
+                display: block;
+                padding: 10px;
+
+
+                a {
+
+                    text-decoration: none;
+                    color: lightgray;
+                }
+            }
+
+
+
+        }
+    }
+
+
+
+    .backToTop {
+
+        padding: 40px;
+        background-color: #46BAE2;
+        cursor: pointer;
+
+    }
+}
+
+
+
+@media only screen and (max-width:992px) {
+
+    $font-size: 14px;
+    $h1-size: 50px;
+    $h2-size: 30px;
+    $h3-size: 20px;
+
+    body {
+
+        font-size: $font-size;
+
+        h1 {
+
+            font-size: $h1-size !important;
+        }
+
+        h2 {
+
+            font-size: $h2-size;
+        }
+
+        h3 {
+
+            font-size: $h3-size;
+        }
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    header {
+
+        height: 650px;
+        padding-top: 20px;
+    }
+
+    .navbar {
+
+        width: 100%;
+        display: block;
+        position: relative;
+
+    }
+
+    .menu {
+
+        display: none;
+        float: none;
+        width: 100%;
+
+        ul {
+
+            display: flex;
+            flex-direction: column;
+
+
+            li {
+
+                padding: 10px;
+            }
+        }
+
+    }
+
+    .icon {
+
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 10px;
+
+    }
+
+    .responsive {
+        display: block
+    }
+
+    .sectionHeader {
+        width: 100%;
+    }
+
+    .headerTextBox {
+        width: 85%;
+    }
+
+    .sectionCardContainer {
+        flex-direction: column;
+
+        .sectionCardBox {
+
+            width: 100%;
+        }
+    }
+
+    .section-3 {
+        padding-top: 60px;
+
+        .sectionHeader {
+            width: 100%;
+        }
+
+        .sectionCardBox {
+            margin-bottom: 30px;
+        }
+    }
+
+    .section-4 {
+        padding:0;
+        .sectionCardContainer{
+            
+        .sectionCardBox {
+            width:100%;
+        }
+    }
+    .blue_btn {
+
+        margin-bottom: 15px;
+    }
+}
+    .section-5 {
+        .sectionHeader {
+            width: 100%;
+        }
+
+        .sectionCardBox {
+            margin-bottom:15px;
+        }
+    }
+
+    .section-6 {
+        .sectionHeader {
+            width: 100%;
+        }
+
+        .sectionCardContainer {
+            width:100%;
+            display:flex;
+            flex-direction: column;
+
+            .sectionCardBox {
+                width:100%;
+            }
+        }
+
+    }
+
+    footer {
+
+        .sectionCardContainer {
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        .sectionHeader {
+            width:100%;
+        }
+
+        .sectionCardBox {
+
+            width:100%;
+            display:flex;
+            flex-direction: column;
+        }
+
+        .inputClass {
+            
+            width:100%;
+           margin-bottom:10px;
+        }
+
+        .inputGroup {
+            width:100%;
+        }
+    }
+
+    iframe {
+        margin-top:20px;
+    }
+
+    .buttomFooter {
+
+        .sectionCardBox:nth-child(1) {
+            width:100%;
+            text-align: center;
+        }
+
+        .sectionCardBox:nth-child(2) {
+            width:100%;
+            margin-bottom:15px;
+        }
+
+    }
+
+}
